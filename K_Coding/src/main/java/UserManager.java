@@ -12,6 +12,7 @@ public class UserManager {
         LOGGER.info("процес створення юзера запущений");
         if (username != null) {
             allUsers.add(username);
+            LOGGER.warn("додавання юзера пройшло успішно");
         } else
             LOGGER.warn("додавання юзера пройшло не успішно");
     }
@@ -23,18 +24,16 @@ public class UserManager {
             LOGGER.warn("видалення юзера пройшло не успішно");
     }
 
-    public void findUser(String username) {
+    public String findUser(String username) {
         boolean found = false;
         for (String user : allUsers) {
             if (user.equals(username)) {
                 System.out.println("Юзер знайдений");
-                found = true;
-                break;
+                return user;
             }
         }
-        if (!found) {
-            LOGGER.warn("Юзер не знайдений");
-        }
+        LOGGER.warn("Юзер не знайдений");
+        return null;
     }
 
     public void userUpdate(String username) {
