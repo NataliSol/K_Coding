@@ -1,0 +1,131 @@
+127.0.0.1 - - [17/Sep/2025:09:12:33 +0300] "GET / HTTP/1.1" 200 512 "-" "Mozilla/5.0"
+203.0.113.45 - - [17/Sep/2025:09:12:35 +0300] "POST /login HTTP/1.1" 302 0 "https://example.com" "Mozilla/5.0" "X-Forwarded-For: 198.51.100.23, 10.0.0.5"
+198.51.100.23 - - [17/Sep/2025:09:12:36 +0300] "GET /dashboard?email=user@example.com HTTP/1.1" 200 1042 "-" "Mozilla/5.0"
+10.10.10.10 - - [17/Sep/2025:09:12:48 +0300] "GET /img/logo.png HTTP/1.1" 200 1337 "-" "curl/8.0.1"
+::1 - - [17/Sep/2025:09:13:01 +0300] "GET /health HTTP/1.1" 200 2 "-" "k8s-probe"
+2001:db8::7334 - - [17/Sep/2025:09:13:05 +0300] "GET /status HTTP/1.1" 200 42 "-" "Mozilla/5.0"
+[2001:db8::1]:8080 - - [17/Sep/2025:09:13:09 +0300] "GET /metrics HTTP/1.1" 200 987 "-" "Prometheus/2.52.0"
+192.168.1.1 - - [17/Sep/2025:09:13:11 +0300] "GET /api/users?contact=admin@mail.example.co.uk HTTP/1.1" 200 321 "-" "Mozilla/5.0"
+Sep 17 09:13:12 server sshd[1456]: Failed password for root from 203.0.113.45 port 45678 ssh2
+Sep 17 09:13:13 server sshd[1456]: Connection closed by authenticating user dev 203.0.113.46 port 45679 [preauth]
+2025-09-17 09:13:14,002 INFO  SignupService - new user email=alice+promo@service.io ref=cmp-42 ip=198.18.0.1
+2025-09-17 09:13:14,227 WARN  Mailer - bounce for recipient="first.last@domain.com" msgId=aa12bb ip=10.1.2.3
+2025-09-17 09:13:14,501 ERROR Api - path=/v1/reset?email=user@[192.168.0.1] status=400 from=192.0.2.10
+198.51.100.50 - - [17/Sep/2025:09:13:15 +0300] "GET /v1/items?page=2 HTTP/1.1" 200 2048 "-" "Mozilla/5.0"
+127.0.0.1 - - [17/Sep/2025:09:13:17 +0300] "POST /api/upload HTTP/1.1" 201 64 "-" "HTTPie/3.2.1"
+10.0.0.1:443 - - [17/Sep/2025:09:13:18 +0300] "GET /secure HTTP/1.1" 200 8 "-" "TLS-Checker"
+203.0.113.55 - - [17/Sep/2025:09:13:20 +0300] "GET /avatar/u/john.doe@example.org.png HTTP/1.1" 200 8192 "-" "Mozilla/5.0"
+NOTICE app[web.1]: user=jane_doe@email.example.com action=login ip=172.16.0.7
+DEBUG [2025-09-17T09:13:22.019Z] traceId=abc-123 userId=42 sourceIp=fe80::1ff:fe23:4567:890a
+INFO  [2025-09-17T09:13:22.120Z] Sending email to <billing@corp.example> for invoice=INV-2025-0917
+WARN  [2025-09-17T09:13:22.221Z] X-Forwarded-For: 203.0.113.60, 198.51.100.99, 10.0.0.2
+ERROR [2025-09-17T09:13:22.322Z] Payment failed for user=user.name+vip@pay.io client=192.0.2.200
+TRACE cfg: version v1.2.3 build 10.0.19045 branch release/2025.09
+AUDIT actor=admin ip=2001:0db8:85a3:0000:0000:8a2e:0370:7334 event=role.grant target=user:77
+POST /contact form: name=Ivan email=ivan.petrov@example.com message="Hello"
+GET /search?q=dev%40mail.example.com&ip=192.168.0.100
+smtp: MAIL FROM:<support@example.net> RCPT TO:<"John Doe" <john.doe@mail.example.org>>
+smtp: 250 2.1.0 Ok
+nginx: client=198.51.100.80 server=app.example request="GET /?e=bad.user@sub.domain.co HTTP/1.1" upstream=10.3.0.4
+cart-service: user=guest ip=[2001:db8::dead:beef] op=add sku=ABC-123 qty=1
+authz: granted scopes=[read,write] sub=joe@work.example
+Sep 17 09:14:01 host CRON[2222]: (root) CMD (/usr/local/bin/backup.sh)
+Sep 17 09:14:02 host backup[3333]: starting snapshot src=10.20.30.40 dst=198.51.100.200 size=1.2GiB
+Sep 17 09:14:03 host backup[3333]: notify to ops@corp.example.com status=OK
+kubelet[777]: Liveness probe failed for pod api-6d7c ip=10.244.0.12
+kube-apiserver[1]: client ip 192.0.2.77 user=system:kube-proxy
+apache: 203.0.113.90 - - [17/Sep/2025:09:14:10 +0300] "GET /~user?mail=foo.bar+baz@x.io HTTP/1.1" 200 55
+app[worker.1]: processing jobId=9a8b7c ip=fd00:dead:beef::1
+db: connection from 10.0.0.12 user=dbuser db=main
+db: connection from 10.0.0.12 user=dbuser db=main terminated
+db: connection from 10.0.0.13 user=reporter db=analytics
+db: slow query by 10.0.0.13 duration=1234ms sql="SELECT * FROM events WHERE email='qa-team@company.io'"
+api: requestId=r1 start ip=100.64.0.10 ua="PostmanRuntime/7.42.0"
+api: requestId=r1 done status=200 bytes=3456
+cdn: hit client=198.51.100.81 path=/static/js/app.abc123.js
+cdn: miss client=203.0.113.81 path=/static/img/logo.svg
+login: success user=olena@example.ua ip=91.200.12.45
+login: failure user=unknown ip=91.200.12.46
+mail: queued to=alerts@noc.example status=deferred host=mx.example ttl=600
+mail: delivered to=hr@example.jobs in=120ms
+git: push by dev@team.example refs/heads/main from 192.0.2.55
+git: hook notify qa-lead@corp.example.com
+S3: GET /bucket/file.txt client=198.51.100.120 signer=access-key-1
+S3: PUT /bucket/private.dat client=10.200.1.5
+S3: DELETE /bucket/tmp.bin client=[2001:db8:1::5]
+audit: impersonation requested by admin@example.com target=user42 at 203.0.113.42
+vault: token issued to svc-payments from 10.10.20.30
+vault: token revoked for user bob@example.org
+metrics: node_ip=10.1.1.1 cpu=0.52 mem=0.71
+metrics: node_ip=10.1.1.2 cpu=0.63 mem=0.77
+metrics: node_ip=10.1.1.3 cpu=0.44 mem=0.66
+cdn: client=198.51.100.130 referrer=https://ref.example/?u=julia%40mail.ua
+auth: OIDC email=mark.smith@idp.example tenant=prod ip=172.20.10.5
+auth: MFA verified for kate@corp.example
+billing: charge user=user+trial@product.io amount=9.99 ip=203.0.113.101
+billing: refund user=client@agency.example amount=9.99 ip=203.0.113.102
+queue: enqueued by ci@build.example job=test ip=10.8.0.9
+worker: started by runner@build.example on 10.8.0.10
+worker: finished job=123 by runner@build.example on 10.8.0.10
+proxy: upstream failed for client [2001:db8:ffff::2]:443
+proxy: retrying to [2001:db8:ffff::2]:443
+proxy: success to [2001:db8:ffff::2]:443
+waf: blocked ip=203.0.113.200 reason=XSS uri="/search?q=<script>"
+waf: allowed ip=198.51.100.200
+vpn: new session from 100.64.32.10 user=alex@example.com
+vpn: session closed from 100.64.32.10
+cache: set key=session:91.200.12.45 ttl=3600
+cache: del key=session:91.200.12.45
+systemd[1]: Started Daily Cleanup.
+systemd[1]: Stopped Daily Cleanup.
+INFO  app - user profile email="weird.name+tag-1@sub.example.travel" updated ip=192.0.2.123
+WARN  app - suspicious ip=256.300.1.1 noted by sensor A
+INFO  app - note: string "v2.3.4" in payload should not be masked
+HTTP/1.1 401 Unauthorized - client 203.0.113.250 requested /admin
+HTTP/1.1 200 OK - client 203.0.113.250 requested /login
+kafka: consumer group app-cg-1 memberId=10.2.0.5 rebalance
+kafka: producer acks=all client.id=writer-1 addr=10.2.0.6
+redis: connect 10.3.0.2:6379 ok
+redis: auth user cache@svc.example ok
+gRPC client=fd00::1234 method=GetUser authority=users.svc.cluster.local
+ELB: access 198.51.100.210:54231 -> 10.0.1.21:443 tls handshake ok
+ELB: access 198.51.100.211:54232 -> 10.0.1.22:443 tls handshake fail
+DNS query from 10.0.53.1 for type=A name=mail.example.com
+DNS answer to 10.0.53.1: mail.example.com A 198.51.100.222
+build: started by ci-bot@example.com on runner 192.0.2.200
+build: finished status=SUCCESS artifacts=ok
+alerts: paging oncall1@pager.example at 03:00Z
+alerts: acked by oncall1@pager.example from 198.51.100.230
+http: 10.11.12.13 - - [16/Sep/2025:23:59:59 +0300] "GET /rollover HTTP/1.1" 200 1 "-" "-"
+http: 10.11.12.14 - - [17/Sep/2025:00:00:01 +0300] "GET /rollover HTTP/1.1" 200 1 "-" "-"
+cron[9999]: MAILTO=reports@example.com
+postfix/smtpd[555]: connect from unknown[203.0.113.77]
+postfix/smtpd[555]: NOQUEUE: reject: RCPT from unknown[203.0.113.77]: 554 5.7.1 <root@example.com>: Relay access denied
+postfix/qmgr[666]: 123ABCD: from=<root@example.com>, size=1234, nrcpt=1 (queue active)
+postfix/smtp[777]: 123ABCD: to=<ops@corp.example.com>, relay=mx.corp.example.com[198.51.100.15]:25, delay=1.2, delays=0.1/0.01/0.5/0.6, dsn=2.0.0, status=sent (250 OK)
+api-gw: path=/v2/pay notify=finops@example.finance ip=203.0.113.180
+api-gw: path=/v2/pay notify="Fin Ops" <finops@example.finance> ip=203.0.113.181
+frontend: ref=/invite?e=vasyl%2Email%40ua.io from=198.51.100.240
+frontend: ref=/reset?email=john_doe%40gmail.com from=198.51.100.241
+storage: PUT by svc@storage.example from 10.5.6.7
+storage: GET by svc@storage.example from 10.5.6.8
+security: user=admin@example.gov ua=Mozilla ip=31.128.100.200
+security: user=user@example.museum ua=Mozilla ip=31.128.100.201
+security: user=oleg@example.ua ua=Mozilla ip=[2001:db8:2::100]
+notes: contact support at support[at]example.com for help
+notes: example host names server-192-168-1-1.example.com are not IPs
+pipeline: email step owner=devops@example.io
+pipeline: notify qa@example.io and pm@example.io
+monitor: src=10.0.0.100 dst=10.0.0.200 rtt=2ms
+monitor: src=10.0.0.101 dst=10.0.0.201 rtt=3ms
+monitor: src=10.0.0.102 dst=[2001:db8:3::10] rtt=5ms
+geoip: looked up 203.0.113.5 -> "Testland"
+geoip: looked up 198.51.100.5 -> "Examplestan"
+support: ticket opened by client@mail.ua ip=95.158.11.22
+support: agent reply to client@mail.ua
+audit: export requested by anna@company.ua from 10.9.9.9
+audit: export delivered to anna@company.ua at 10.9.9.9
+backup: rsync from 10.10.10.20 to 10.10.10.21
+backup: rsync from [2001:db8:4::20] to [2001:db8:4::21]
+report: sent to board@enterprise.example on 2025-09-17
+report: cc to cfo@enterprise.example and ceo@enterprise.example
